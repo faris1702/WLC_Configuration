@@ -37,13 +37,18 @@ The server is used to provide DHCP service to the APs.<br><br>
 The laptop is used to configure the WLC and the 2 smartphones are used to connect to the APs and test the functionality.<br><br>
 
 ### Initial Setup
-<b><u>Step 1</b></u><br>
+<b><ins>Step 1: Select the devices</b></ins><br>
 - Select the correct network devices and place them into your workspace<br><br>
 
-<b><u>Step 2</b></u><br>
+<b><ins>Step 2: Power on switch</b></ins><br>
 - Once all the devices are placed into the workspace, the Switch needs to be powered on
 - Click on SW1
 - Then select the "AC-POWER-SUPPLY" module on the bottom right, click and drag it into the physical switch empty space (right side of physical switch). There will be 2 empty spaces and you can place it in any one of them.
   ![SW_Physical](SW_Physical.JPG)<br><br>
 
-<<b><u>Step 3</b></u><br>
+<b><ins>Step 3: Connect the devices together</b></ins><br>
+- Once the power supply is connected to the Switch, wait for it to load up. You can view the CLI to check whether it is done loading.
+- After loading, start connecting the devices using a straight-through cable since all the devices are connected to the switch.
+- Make sure to keep track which ports are used for the connections<br><br>
+
+<b><ins>Step 4: </b></ins><br>
