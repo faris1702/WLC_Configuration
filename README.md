@@ -69,7 +69,7 @@ SW1(config-if-range)# power inline auto
   - SW1 VLAN1: 192.168.0.254/24
   - SRV1: 192.168.0.1/24
   - WLC1: 192.168.0.2/24
-- Set the default gateway of SRV1 and WLC1 as SW1 VLAN1.<br><br>
+- Set the default gateway of SRV1 and WLC1 as SW1 VLAN1 (192.168.0.254).<br><br>
 
 <b><ins>Step 6: IP Routing</b></ins><br>
 - R1
@@ -94,7 +94,9 @@ SW1(config-if-range)# power inline auto
 - Set the 'Gateway/DNS IPv4' to Static and then back to DHCP
 - The Default Gateway and DNS Server should be the same as configured in the DHCP Pool
   - Default Gateway: 192.168.0.254
-  - DNS: 0.0.0.0<br><br>
+  - DNS: 0.0.0.0
+- Hover over the device in the logical view and you should be able to view the IP address of the LWAP
+- Make sure that it is within the range of the DHCP pool (192.168.0.10 - 192.168.0.254)<br><br>
   
 <b><ins>Laptop</b></ins><br>
 - Using the command prompt, check the currnet ipconfig
@@ -107,3 +109,58 @@ SW1(config-if-range)# power inline auto
 - Key in IP address of WLC (192.168.0.2) in the URL
 - The Admin creation page will come out as shown below:<br>
   ![WLC_Admin_Page](WLC_Admin_Page.JPG)<br><br>
+
+<b><ins>Step 2: Admin Setup</b></ins><br>
+- Set the admin username and password, it will be used to login into the WLC portal after setup
+- Next, you will set the controller configurations
+  - System Name: WLC1
+  - Management IP: 192.168.0.2 (IP address of the WLC that was set earlier in 'Initial Setup' > Step 5.
+  - Subnet Mask: 255.255.255.0
+  - Default Gateway: 192.168.0.254 (IP address of SW1 VLAN 1)
+- Next, create your wireless network (required to set up at least 1 network)
+  - Select Employee
+  - Network Name: Employee
+  - Passphrase: <password>
+- You don't need to do the last part, can just click 'Next'
+- The following pictures are in the order just explained<br>
+  ![WLC_Config_Init1](WLC_Config_Init1.JPG)<br><br>
+  ![WLC_Config_Init2](WLC_Config_Init2.JPG)<br><br>
+  ![WLC_Config_Init3](WLC_Config_Init3.JPG)<br><br>
+
+<b><ins>Step 3: Reconnecting to WLC</b></ins><br>
+- Once you have completed step 2, there will be a warning. Just click OK
+- Close the window and enter Command Prompt.
+- Ping WLC1
+- Once you receive a response, it means that the set up is complete.
+- Close the window and enter Web Browser
+- Type in the URL "https://192.168.0.2" (IP address of WLC1)
+- The following login page should appear<br>
+  ![WLC_Config_Init_Finished](WLC_Config_Init_Finished.JPG)<br><br>
+
+## WLAN & AP Group Setup
+<b><ins>Step 1: Login into WLC</b></ins><br>
+- Login into the WLC using the username and password set in Step 2
+- You should see the following page:<br>
+  ![WLC_Home_Screen](WLC_Home_Screen.JPG)<br><br>
+
+<b><ins>Step 2: Setting Up WLANs</b></ins><br>
+- From the Monitor page (Home page), select WLANs
+- You should be able to view the WLAN that was created earlier in step 2, as shown below:<br>
+  ![WLC_New_WLAN_1.JPG](WLC_New_WLAN_1.JPG)<br><br>
+
+- Click on 'Go" located beside the "Create New" dropdown.
+- Set Profile Name and SSID to "Guest", then click "Next"<br>
+  ![New_WLAN_2](New_WLAN_2.JPG)<br><br>
+
+- In the "General" settings, set "Status" to enabled<br>
+  ![New_WLAN_3](New_WLAN_3.JPG)<br><br>
+
+- In the "Security" > "Layer 2" settings
+  - Set "Layer 2 Security" to "WPA+WPA2"
+  - Under "WPA+WPA2 Parameters", select "WPA2 Policy"
+  - Next, under "Authentication Key Management", select "PSK"
+  - Then, under "PSK Format", key in your password for the WLAN
+- Once done, click "OK" and then click "Back". The new Guest WLAN should appear as shown below:<br>
+![Pic](New_AP_Group_1.JPG)<br><br>
+
+<b><ins>Step 3: Setting Up AP Groups</b></ins><br>
