@@ -2,7 +2,7 @@
 This is a basic Wireless LAN Controller setup done in Packet Tracer. Elements of the setup was taken from this [video](https://www.youtube.com/watch?v=0dfm9ws9DXI).<br><br>
 
 In this setup, a single WLC will be used to control 2 Lightweight APs. The 2 APs will provide for 2 different WLANs, Guest & Employee, with each AP providing for 1 WLAN. A server is used to provide DHCP service for the LWAPs.<br>
-<b>Note: </b> This guide is based on the assumption that you have basic knowledge in networking and device configuration. Full commands are not shown in this guide, although I will give a fairly detailed guide.
+<b>Note: </b> This guide is based on the assumption that you have basic knowledge in networking and device configuration. Full CLI commands are not shown in this guide for the initial part, such as setting IP addresses. This guide will be more focused on WLAN and AP Group configuration through the WLC web interface.
 # Configuration
 ## Topology
 ![Network Topolgy](Init_Topology.JPG)<br><br>
@@ -167,3 +167,22 @@ SW1(config-if-range)# power inline auto
 ![Pic](New_AP_Group_6.JPG)<br><br>
 
 <b><ins>Step 3: Setting Up AP Groups</b></ins><br>
+- From the same page ("WLANs" page), click on "AP Groups", located on the left side of the page<br>
+  ![New_AP_Group_1](New_AP_Group_1.png)<br><br>
+
+- You will see "default-group". Currently, all APs are grouped in it<br>
+  ![New_AP_Group_2](New_AP_Group_2.png)<br><br>
+
+- Select "Add Group" on the top left of the screen
+- Then, set the following
+  - AP Group Name: Guest
+  - Description: Guest Wi-Fi (or whatever description you want)<br>
+  - Click on 
+    ![New_AP_Group_3](New_AP_Group_3.png)<br><br>
+
+- Under "WLANs", select "Employee(1)" for the WLAN SSID
+  ![New_AP_Group_4](New_AP_Group_4.png)<br><br>
+
+- Under "APs", select LWAP1, the LWAP located within Employee in the topology
+  ![New_AP_Group_5](New_AP_Group_5.png)<br><br>
+    
