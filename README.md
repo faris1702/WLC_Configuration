@@ -43,5 +43,7 @@ The laptop is used to configure the WLC and the 2 smartphones are used to connec
 <b><u>Step 2</b></u><br>
 - Once all the devices are placed into the workspace, the Switch needs to be powered on
 - Click on SW1
-- Then select the "AC-POWER-SUPPLY" module on the bottom left and place it into the physical switch empty space. There will be 2 empty spaces and you can place it in any one of them.
+- Then select the "AC-POWER-SUPPLY" module on the bottom right, click and drag it into the physical switch empty space (right side of physical switch). There will be 2 empty spaces and you can place it in any one of them.
   ![SW_Physical](SW_Physical.JPG)<br><br>
+
+<<b><u>Step 3</b></u><br>
