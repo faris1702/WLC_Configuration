@@ -159,8 +159,11 @@ SW1(config-if-range)# power inline auto
   - Set "Layer 2 Security" to "WPA+WPA2"
   - Under "WPA+WPA2 Parameters", select "WPA2 Policy"
   - Next, under "Authentication Key Management", select "PSK"
-  - Then, under "PSK Format", key in your password for the WLAN
+  - Then, under "PSK Format", key in your password for the WLAN<br>
+  ![New_WLAN_4](New_WLAN_4.JPG)<br><br>
+  ![New_WLAN_5](New_WLAN_5.JPG)<br><br>
+  
 - Once done, click "OK" and then click "Back". The new Guest WLAN should appear as shown below:<br>
-![Pic](New_AP_Group_1.JPG)<br><br>
+![Pic](New_AP_Group_6.JPG)<br><br>
 
 <b><ins>Step 3: Setting Up AP Groups</b></ins><br>
