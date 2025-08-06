@@ -14,7 +14,7 @@ This topology consists of the following network devices:
 - 1 Server
 - 3 End Devices: 1 Laptop & 2 Smartphones
 
-<b><u>Reasons for choosing these network devices</b></u>:<br><br>
+### Reasons for choosing these network devices
 <b>1. 4331 Router</b><br>
 There is no particular reason for the router selection as it was used solely as the default gateway of the network.<br><br>
 
