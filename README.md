@@ -106,4 +106,4 @@ SW1(config-if-range)# power inline auto
 - Go to Laptop > Desktop > Web Browser
 - Key in IP address of WLC (192.168.0.2) in the URL
 - The Admin creation page will come out as shown below:<br>
-  ![WLC_Admin_Page](WLC_Admin_Page.PNG)<br><br>
+  ![WLC_Admin_Page](WLC_Admin_Page.JPG)<br><br>
