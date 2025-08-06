@@ -86,5 +86,6 @@ SW1(config-if-range)# power inline auto
   - The default gateway should be the IP address of SW1 VLAN 1, 192.168.0.254
   - The DNS server is not set since DNS is not used for this lab
   - Make sure to set the service as 'On'
-  - Once done, save
+  - Once done, save<br>
+
 ![SRV1_DHCP_Settings](SRV1_DHCP_Settings_1.JPG)<br><br>
