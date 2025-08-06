@@ -1,8 +1,8 @@
 # WLC_Configuration
 This is a basic Wireless LAN Controller setup done in Packet Tracer. Elements of the setup was taken from this [video](https://www.youtube.com/watch?v=0dfm9ws9DXI).<br><br>
 
-In this setup, a single WLC will be used to control 2 Lightweight APs. The 2 APs will provide for 2 different WLANs, Guest & Employee, with each AP providing for 1 WLAN. A server is used to provide DHCP service for the LWAPs.
-
+In this setup, a single WLC will be used to control 2 Lightweight APs. The 2 APs will provide for 2 different WLANs, Guest & Employee, with each AP providing for 1 WLAN. A server is used to provide DHCP service for the LWAPs.<br>
+<b>Note: </b> This guide is based on the assumption that you have basic knowledge in networking and device configuration. Full commands are not shown in this guide, although I will give a fairly detailed guide.
 # Configuration
 ## Topology
 ![Network Topolgy](Init_Topology.JPG)<br><br>
@@ -61,7 +61,7 @@ SW1(config-if-range)# power inline auto
 - This will set the ports to automatically give power to PoE devices connected to it.
 - Note: You should interface the ports that are connected to the APs in your configuration, may not be the same as mine.
 
-<b><ins>Step 5: IPv4 Addresses</b></ins><br>
+<b><ins>Step 5: IPv4 Network Addressing</b></ins><br>
 - The network between SW1 and R1 is 192.168.1.0/30.
   - R1: 192.168.1.1/30
   - SW1 G1/0/1: 192.168.1.2/30 
@@ -69,3 +69,19 @@ SW1(config-if-range)# power inline auto
   - SW1 VLAN1: 192.168.0.254/24
   - SRV1: 192.168.0.1/24
   - WLC1: 192.168.0.2/24
+- Set the default gateway of SRV1 and WLC1 as SW1 VLAN1.<br><br>
+
+<b><ins>Step 6: IP Routing</b></ins><br>
+- R1
+  - Set a route to the network 192.168.0.0/24 making SW1 G1/0/1 IPv4 address (192.168.1.2) the next hop
+- SW1
+  - Enable IP routing on SW1
+  - Configure a default route to R1 G0/0/0 interface (192.168.1.1)
+ 
+## Server DHCP Service Configuration
+- Select the following: SRV1 > Services > DHCP
+- Set the following: <br>
+![SRV1_DHCP_Settings](SRV1_DHCP_Settings.JPG)<br><br>
+  - The DHCP pool should be within the subnet of VLAN 1, 192.168.0.0/24
+  - Good practice to reserve the first few addresses of the network
+  - The default gateway should be the IP address of SW1 VLAN 1, 192.168.0.254
