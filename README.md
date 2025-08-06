@@ -43,7 +43,7 @@ The laptop is used to configure the WLC and the 2 smartphones are used to connec
 <b><ins>Step 2: Power on switch</b></ins><br>
 - Once all the devices are placed into the workspace, the Switch needs to be powered on
 - Click on SW1
-- Then select the "AC-POWER-SUPPLY" module on the bottom right, click and drag it into the physical switch empty space (right side of physical switch). There will be 2 empty spaces and you can place it in any one of them.
+- Then select the "AC-POWER-SUPPLY" module on the bottom right, click and drag it into the physical switch empty space (right side of physical switch). There will be 2 empty spaces and you can place it in any one of them.<br>
   ![SW_Physical](SW_Physical.JPG)<br><br>
 
 <b><ins>Step 3: Connect the devices together</b></ins><br>
@@ -87,5 +87,4 @@ SW1(config-if-range)# power inline auto
   - The DNS server is not set since DNS is not used for this lab
   - Make sure to set the service as 'On'
   - Once done, save<br>
-
 ![SRV1_DHCP_Settings](SRV1_DHCP_Settings_1.JPG)<br><br>
