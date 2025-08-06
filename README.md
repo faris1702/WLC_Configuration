@@ -193,6 +193,7 @@ Before setting up AP Groups, minimize the web browser and hover your mouse over 
 - Make sure to save all the configurations by clicking on "Apply"
 
 ## Testing WLC Configuration
+- Hover your mouse above the LWAPs, you should now see that under "Providing WLANs", it only contain the respective WLAN instead of both WLANs previously.
 - Go to Smartphone > Config > Wireless
 - Set the SSID to "Employee" and "Guest" respectively
 - Under "Authentication", select "WPA2-PSK" and key in the password you previously set
