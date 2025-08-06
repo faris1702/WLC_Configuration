@@ -36,7 +36,7 @@ The server is used to provide DHCP service to the APs.<br><br>
 <b><ins>End Devices</ins></b><br>
 The laptop is used to configure the WLC and the 2 smartphones are used to connect to the APs and test the functionality.<br><br>
 
-### Initial Setup
+## Initial Setup
 <b><ins>Step 1: Select the devices</b></ins><br>
 - Select the correct network devices and place them into your workspace<br><br>
 
@@ -51,4 +51,11 @@ The laptop is used to configure the WLC and the 2 smartphones are used to connec
 - After loading, start connecting the devices using a straight-through cable since all the devices are connected to the switch.
 - Make sure to keep track which ports are used for the connections<br><br>
 
-<b><ins>Step 4: </b></ins><br>
+<b><ins>Step 4: Power on LWAPs</b></ins><br>
+- This step is optional since the LWAPs will automatically receive power from SW1 through PoE
+- Enter the CLI of SW1
+```
+SW1(config)# interface range g1/0/23-24
+SW1(config-if-range)# power inline auto
+```
+- You should interface the ports that are connected to the APs in your configuration, may not be the same as mine
