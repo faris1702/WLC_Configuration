@@ -51,11 +51,21 @@ The laptop is used to configure the WLC and the 2 smartphones are used to connec
 - After loading, start connecting the devices using a straight-through cable since all the devices are connected to the switch.
 - Make sure to keep track which ports are used for the connections<br><br>
 
-<b><ins>Step 4: Power on LWAPs</b></ins><br>
-- This step is optional since the LWAPs will automatically receive power from SW1 through PoE
-- Enter the CLI of SW1
+<b><ins>Step 4: Power on LWAPs (Optional) </b></ins><br>
+- This step is optional since the LWAPs will automatically receive power from SW1 through PoE.
+- Enter the CLI of SW1 and key in the following commands:
 ```
 SW1(config)# interface range g1/0/23-24
 SW1(config-if-range)# power inline auto
 ```
-- You should interface the ports that are connected to the APs in your configuration, may not be the same as mine
+- This will set the ports to automatically give power to PoE devices connected to it.
+- Note: You should interface the ports that are connected to the APs in your configuration, may not be the same as mine.
+
+<b><ins>Step 5: IPv4 Addresses</b></ins><br>
+- The network between SW1 and R1 is 192.168.1.0/30.
+  - R1: 192.168.1.1/30
+  - SW1 G1/0/1: 192.168.1.2/30 
+- The network of VLAN1 (all other devices connected to SW1) will be 192.168.0.0/24.
+  - SW1 VLAN1: 192.168.0.254/24
+  - SRV1: 192.168.0.1/24
+  - WLC1: 192.168.0.2/24
