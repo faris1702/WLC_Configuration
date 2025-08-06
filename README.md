@@ -168,21 +168,21 @@ SW1(config-if-range)# power inline auto
 
 <b><ins>Step 3: Setting Up AP Groups</b></ins><br>
 - From the same page ("WLANs" page), click on "AP Groups", located on the left side of the page<br>
-  ![New_AP_Group_1](New_AP_Group_1.png)<br><br>
+  ![New_AP_Group_1](New_AP_Group_1.JPG)<br><br>
 
 - You will see "default-group". Currently, all APs are grouped in it<br>
-  ![New_AP_Group_2](New_AP_Group_2.png)<br><br>
+  ![New_AP_Group_2](New_AP_Group_2.JPG)<br><br>
 
 - Select "Add Group" on the top left of the screen
 - Then, set the following
   - AP Group Name: Guest
   - Description: Guest Wi-Fi (or whatever description you want)<br>
-  - Click on 
-    ![New_AP_Group_3](New_AP_Group_3.png)<br><br>
+  - Click on <br>
+    ![New_AP_Group_3](New_AP_Group_3.JPG)<br><br>
 
-- Under "WLANs", select "Employee(1)" for the WLAN SSID
-  ![New_AP_Group_4](New_AP_Group_4.png)<br><br>
+- Under "WLANs", select "Employee(1)" for the WLAN SSID<br>
+  ![New_AP_Group_4](New_AP_Group_4.JPG)<br><br>
 
-- Under "APs", select LWAP1, the LWAP located within Employee in the topology
-  ![New_AP_Group_5](New_AP_Group_5.png)<br><br>
+- Under "APs", select LWAP1, the LWAP located within Employee in the topology<br>
+  ![New_AP_Group_5](New_AP_Group_5.JPG)<br><br>
     
