@@ -164,9 +164,11 @@ SW1(config-if-range)# power inline auto
   ![New_WLAN_5](New_WLAN_5.JPG)<br><br>
   
 - Once done, click "OK" and then click "Back". The new Guest WLAN should appear as shown below:<br>
-![Pic](New_AP_Group_6.JPG)<br><br>
+![New_AP_Group_6](New_AP_Group_6.JPG)<br><br>
 
 <b><ins>Step 3: Setting Up AP Groups</b></ins><br>
+Before setting up AP Groups, minimize the web browser and hover your mouse over the 2 LWAPs. You should be able to see that both LWAPs will have "CAPWAP Status: Connected to 192.168.0.2" and below it the "Providing WLANs" should consist of both Guest and Employee WLAN.<br>
+
 - From the same page ("WLANs" page), click on "AP Groups", located on the left side of the page<br>
   ![New_AP_Group_1](New_AP_Group_1.JPG)<br><br>
 
@@ -175,14 +177,33 @@ SW1(config-if-range)# power inline auto
 
 - Select "Add Group" on the top left of the screen
 - Then, set the following
-  - AP Group Name: Guest
-  - Description: Guest Wi-Fi (or whatever description you want)<br>
+  - AP Group Name: Employee
+  - Description: Employee Wi-Fi (or whatever description you want)<br>
   - Click on <br>
-    ![New_AP_Group_3](New_AP_Group_3.JPG)<br><br>
+    ![New_AP_Group_7](New_AP_Group_7.JPG)<br><br>
 
+- Now, click on "Employee" group
 - Under "WLANs", select "Employee(1)" for the WLAN SSID<br>
   ![New_AP_Group_4](New_AP_Group_4.JPG)<br><br>
 
 - Under "APs", select LWAP1, the LWAP located within Employee in the topology<br>
   ![New_AP_Group_5](New_AP_Group_5.JPG)<br><br>
-    
+
+<br>
+- Make sure to save all the configurations by clicking on "Apply"
+
+## Testing WLC Configuration
+- Go to Smartphone > Config > Wireless
+- Set the SSID to "Employee" and "Guest" respectively
+- Under "Authentication", select "WPA2-PSK" and key in the password you previously set
+- After a while, a connection will be established between the smartphone and the LWAP<br>
+  ![Final_Topology](Final_Topology.JPG)<br><br>
+
+- Also, notice that the IP address of the phone is within the range configured in DHCP pool earlier.<br>
+  ![Phone_Settings](Phone_Settings.JPG)<br><br>
+  
+<b>Note:</b> Due to limitations on Packet Tracer, only 1 smartphone will be connected to its respective . You can try to save and restart to see whether the other smartphone connects to its respective LWAP. I restarted mine and managed to get it to work for the other smartphone.<br>
+![Topology_Restarted](Topology_Restarted.JPG)<br><br>
+
+# The End
+That's all for the lab. Thanks for reading.
