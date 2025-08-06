@@ -43,7 +43,7 @@ The laptop is used to configure the WLC and the 2 smartphones are used to connec
 <b><ins>Step 2: Power on switch</b></ins><br>
 - Once all the devices are placed into the workspace, the Switch needs to be powered on
 - Click on SW1
-- Then select the "AC-POWER-SUPPLY" module on the bottom right, click and drag it into the physical switch empty space (right side of physical switch). There will be 2 empty spaces and you can place it in any one of them.<br>
+- Then select the "AC-POWER-SUPPLY" module on the bottom right, hold and drag it into the physical switch empty space (right side of physical switch). There will be 2 empty spaces and you can place it in any one of them.<br>
   ![SW_Physical](SW_Physical.JPG)<br><br>
 
 <b><ins>Step 3: Connect the devices together</b></ins><br>
@@ -88,3 +88,22 @@ SW1(config-if-range)# power inline auto
   - Make sure to set the service as 'On'
   - Once done, save<br>
 ![SRV1_DHCP_Settings](SRV1_DHCP_Settings_1.JPG)<br><br>
+
+## Testing DHCP and IP configurations
+<b><ins>LWAPs</b></ins><br>
+- Set the 'Gateway/DNS IPv4' to Static and then back to DHCP
+- The Default Gateway and DNS Server should be the same as configured in the DHCP Pool
+  - Default Gateway: 192.168.0.254
+  - DNS: 0.0.0.0<br><br>
+  
+<b><ins>Laptop</b></ins><br>
+- Using the command prompt, check the currnet ipconfig
+- Renew the ipconfig and make sure it follows the DHCP pool
+
+## WLC Configuration
+### Initial Setup
+<b><ins>Step 1: Connect to WLC</b></ins><br>
+- Go to Laptop > Desktop > Web Browser
+- Key in IP address of WLC (192.168.0.2) in the URL
+- The Admin creation page will come out as shown below
+  ![WLC_Admin_Page](WLC_Admin_Page.PNG)
