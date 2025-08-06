@@ -38,7 +38,7 @@ The laptop is used to configure the WLC and the 2 smartphones are used to connec
 
 ## Initial Setup
 <b><ins>Step 1: Select the devices</b></ins><br>
-- Select the correct network devices and place them into your workspace<br><br>
+- Select the correct network devices and place them into your workspace as shown in the picture above<br><br>
 
 <b><ins>Step 2: Power on switch</b></ins><br>
 - Once all the devices are placed into the workspace, the Switch needs to be powered on
@@ -105,5 +105,5 @@ SW1(config-if-range)# power inline auto
 <b><ins>Step 1: Connect to WLC</b></ins><br>
 - Go to Laptop > Desktop > Web Browser
 - Key in IP address of WLC (192.168.0.2) in the URL
-- The Admin creation page will come out as shown below
-  ![WLC_Admin_Page](WLC_Admin_Page.PNG)
+- The Admin creation page will come out as shown below:<br>
+  ![WLC_Admin_Page](WLC_Admin_Page.PNG)<br><br>
