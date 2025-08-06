@@ -5,7 +5,7 @@ This is a basic Wireless LAN Controller setup done in Packet Tracer. Elements of
 ## Introduction
 
 ## Topology
-![Network Topolgy](Topology.png)
+![Network Topolgy](Topology.JPG)
 This topology consists of the following network devices:
 - 1 Router: 4331
 - 1 Switch: 3650 24PS
