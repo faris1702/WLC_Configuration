@@ -1,7 +1,8 @@
 # WLC_Configuration
 This is a basic Wireless LAN Controller setup done in Packet Tracer. Elements of the setup was taken from this [video](https://www.youtube.com/watch?v=0dfm9ws9DXI).<br><br>
 
-In this setup, a single WLC will be used to control 2 Lightweight APs. The 2 APs will provide for 2 different WLANs, Guest & Employee, with each AP providing for 1 WLAN. A server is used to provide DHCP service for the LWAPs.<br>
+In this setup, a single WLC will be used to control 2 Lightweight APs. The 2 APs will provide for 2 different WLANs, Guest & Employee, with each AP providing for 1 WLAN. A server is used to provide DHCP service for the LWAPs.<br><br>
+
 <b>Note: </b> This guide is based on the assumption that you have basic knowledge in networking and device configuration. Full CLI commands are not shown in this guide for the initial part, such as setting IP addresses. This guide will be more focused on WLAN and AP Group configuration through the WLC web interface.
 # Configuration
 ## Topology
