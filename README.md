@@ -81,7 +81,7 @@ SW1(config-if-range)# power inline auto
 ## Server DHCP Service Configuration
 - Select the following: SRV1 > Services > DHCP
 - Set the following: <br>
-![SRV1_DHCP_Settings](SRV1_DHCP_Settings.JPG)<br><br>
+
   - The DHCP pool should be within the subnet of VLAN 1, 192.168.0.0/24
   - Good practice to reserve the first few addresses of the network
   - The default gateway should be the IP address of SW1 VLAN 1, 192.168.0.254
