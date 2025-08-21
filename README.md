@@ -7,7 +7,7 @@ In this setup, a single WLC will be used to control 2 Lightweight APs. The 2 APs
 # Configuration
 ## Design
 ### Lightweight AP Deployment
-![CAPWAP](CAPWAP.PNG)<br><br>
+![CAPWAP](CAPWAP.jpg)<br><br>
 In this network, we will be using a wireless lightweight AP deployment (also known as split-MAC architecture). There will be a single Wireless LAN Controller (WLC) that is used to control all the lightweight APs (LWAPs) in the network. The LWAPs and WLC communicate with each other through a CAPWAP (Control and Provisioning of Wireless Access Points) tunnel.
 <br>
 <b>Picture by:Jeremy's IT Lab - CCNA Course (Youtube)</b><br>
