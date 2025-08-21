@@ -5,6 +5,13 @@ In this setup, a single WLC will be used to control 2 Lightweight APs. The 2 APs
 
 <b>Note: </b> This guide is based on the assumption that you have basic knowledge in networking and device configuration. Full CLI commands are not shown in this guide for the initial part, such as setting IP addresses. This guide will be more focused on WLAN and AP Group configuration through the WLC web interface.
 # Configuration
+## Design
+### Lightweight AP Deployment
+![CAPWAP](CAPWAP.JPG)<br><br>
+In this network, we will be using a wireless lightweight AP deployment (also known as split-MAC architecture). There will be a single Wireless LAN Controller (WLC) that is used to control all the lightweight APs (LWAPs) in the network. The LWAPs and WLC communicate with each other through a CAPWAP (Control and Provisioning of Wireless Access Points) tunnel.
+<br>
+<b>Picture by:Jeremy's IT Lab - CCNA Course (Youtube)</b><br>
+
 ## Topology
 ![Network Topolgy](Init_Topology.JPG)<br><br>
 This topology consists of the following network devices:
